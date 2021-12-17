@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="fragment"
+            type="com.example.bankingsystem.view.home.fragments.HomeFragment" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/backgroundColor"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/logInButtonColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_percent="0.3"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0" />
+
+        <ImageView
+            android:id="@+id/userNameImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/profile_edit_photo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.05" />
+
+        <TextView
+            android:id="@+id/userNameText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/reem_rufi_regular"
+            android:gravity="center"
+            android:text="@string/william_jackson"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_L"
+            app:layout_constraintTop_toBottomOf="@+id/userNameImage" />
+
+        <ImageView
+            android:id="@+id/editImage"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/mdi_account_remove"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.35"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/backgroundColor" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/reem_rufi_regular"
+            android:text="@string/edit_profile"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_size_L"
+            android:onClick="@{_->fragment.openSettings()}"
+            app:layout_constraintStart_toEndOf="@+id/editImage"
+            app:layout_constraintTop_toBottomOf="@+id/backgroundColor" />
+
+        <View
+            android:id="@+id/border"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="50dp"
+            android:background="@color/gray"
+            app:layout_constraintTop_toBottomOf="@+id/backgroundColor" />
+
+        <Button
+            android:id="@+id/account"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_shape_auth"
+            android:backgroundTint="@color/logInButtonColor"
+            android:fontFamily="@font/reem_rufi_regular"
+            android:onClick="@{_->fragment.addAccount()}"
+            android:text="@string/activate_account"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_L"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/border"
+            app:layout_constraintWidth_percent="0.4" />
+
+        <Button
+            android:id="@+id/utility"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/button_shape_auth"
+            android:backgroundTint="@color/logInButtonColor"
+            android:fontFamily="@font/reem_rufi_regular"
+            android:text="@string/pay_utility"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_L"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/border"
+            app:layout_constraintWidth_percent="0.4" />
+
+        <Button
+            android:id="@+id/extractFor"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_shape_auth"
+            android:backgroundTint="@color/logInButtonColor"
+            android:fontFamily="@font/reem_rufi_regular"
+            android:text="@string/extract_for"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_L"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/account"
+            app:layout_constraintWidth_percent="0.4" />
+
+        <Button
+            android:id="@+id/makeTransaction"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/button_shape_auth"
+            android:backgroundTint="@color/logInButtonColor"
+            android:fontFamily="@font/reem_rufi_regular"
+            android:text="@string/make_transaction"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_L"
+            android:onClick="@{_->fragment.openTransaction()}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/utility"
+            app:layout_constraintWidth_percent="0.4" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

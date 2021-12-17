@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    >
+    <data>
+        <variable
+            name="activity"
+            type="com.example.bankingsystem.view.addAccount.ActivateAccount" />
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.addAccount.ActivateAccount">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".view.auth.SignUpActivity">
+
+            <ImageView
+                android:id="@+id/signUpPic"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/sign_up_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.1"
+                app:layout_constraintWidth_percent="0.6" />
+
+            <TextView
+                android:id="@+id/signUpText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/reem_rufi_regular"
+                android:gravity="center"
+                android:text="@string/activate_account"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_XXL"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/signUpPic" />
+
+            <EditText
+                android:id="@+id/accountType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:backgroundTint="@color/hintColor"
+                android:hint="@string/account_type"
+                android:paddingTop="10dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="10dp"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/text_size_L"
+                app:layout_constraintTop_toBottomOf="@+id/signUpText" />
+
+            <EditText
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:backgroundTint="@color/hintColor"
+                android:hint="User Address"
+                android:paddingEnd="20dp"
+                android:paddingBottom="10dp"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/text_size_L"
+                app:layout_constraintTop_toBottomOf="@+id/accountType" />
+            <EditText
+                android:id="@+id/userPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:backgroundTint="@color/hintColor"
+                android:hint="@string/second_phone_number"
+                android:paddingEnd="20dp"
+                android:paddingBottom="10dp"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/text_size_L"
+                app:layout_constraintTop_toBottomOf="@+id/address" />
+
+            <EditText
+                android:id="@+id/socialNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:backgroundTint="@color/hintColor"
+                android:hint="@string/social_card_id"
+                android:paddingEnd="20dp"
+                android:paddingBottom="10dp"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/text_size_L"
+                app:layout_constraintTop_toBottomOf="@+id/userPhoneNumber" />
+
+            <ImageView
+                android:id="@+id/check"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/check"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.25"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/socialNumber" />
+
+            <TextView
+                android:id="@+id/acceptTermsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/iAcceptTermsAndConditions"
+                android:textSize="@dimen/text_size_S"
+                app:layout_constraintStart_toEndOf="@+id/check"
+                app:layout_constraintTop_toBottomOf="@+id/socialNumber" />
+
+            <Button
+                android:id="@+id/signUpButton"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/image_view_size_L"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/button_shape_auth"
+                android:backgroundTint="@color/logInButtonColor"
+                android:fontFamily="@font/reem_rufi_regular"
+                android:gravity="center"
+                android:onClick="@{_->activity.addAccount()}"
+                android:text="@string/activate_account"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_L"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/acceptTermsText"
+                app:layout_constraintVertical_bias="0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

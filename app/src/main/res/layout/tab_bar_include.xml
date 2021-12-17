@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    >
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/tool_bar_size"
+    android:orientation="horizontal"
+    android:weightSum="4">
+<LinearLayout
+    android:id="@+id/homeLayout"
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/homeImage"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/home"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/homeText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/home"
+        android:gravity="center"
+        android:textSize="@dimen/text_size_S"
+        />
+</LinearLayout>
+    <LinearLayout
+        android:id="@+id/transactionLayout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/transactionImage"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/transaction_image"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/transactionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/transactions"
+            android:gravity="center"
+            android:textSize="@dimen/text_size_S"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/depositLayout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/depositImage"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_baseline_attach_money_24"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/depositText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/deposit"
+            android:gravity="center"
+            android:textSize="@dimen/text_size_S"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/settingsLayout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/settingsImage"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/settings"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/settingsText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/settings"
+            android:gravity="center"
+            android:textSize="@dimen/text_size_S"
+            />
+    </LinearLayout>
+</LinearLayout>
+
+</layout>

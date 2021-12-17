@@ -1,0 +1,42 @@
+<resources>
+    <!-- Example customization of dimensions originally defined in res/values/dimens.xml
+         (such as screen margins) for screens with more than 820dp of available width. This
+         would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively). -->
+    <!--IMAGE View-->
+    <dimen name="image_view_size_XXS">5dp</dimen>
+    <dimen name="image_view_size_XS">10dp</dimen>
+    <dimen name="image_view_size_S">15dp</dimen>
+    <dimen name="image_view_size_SL">20dp</dimen>
+    <dimen name="image_view_size_M">30dp</dimen>
+    <dimen name="image_view_size_L">43dp</dimen>
+    <dimen name="image_view_size_XL">55dp</dimen>
+    <dimen name="image_view_size_XXL">70dp</dimen>
+    <dimen name="image_view_size_XXXL">80dp</dimen>
+    <dimen name="image_view_size_XXXXL">100dp</dimen>
+
+    <dimen name="image_size_land">80dp</dimen>
+
+
+    <dimen name="home_bottom_view_icons_size">23.5dp</dimen>
+    <dimen name="home_bottom_view_text_size">13.5sp</dimen>
+
+    <dimen name="user_profile_image_size">130dp</dimen>
+    <dimen name="pager_item_size">180dp</dimen>
+    <dimen name="pager_image_size">170dp</dimen>
+    <dimen name="image_size_land_general">300dp</dimen>
+    <dimen name="build_sentence_row_size">80dp</dimen>
+
+    <!--Text size-->
+    <dimen name="text_size_XXXS">8sp</dimen>
+    <dimen name="text_size_XXS">10sp</dimen>
+    <dimen name="text_size_XS">12sp</dimen>
+    <dimen name="text_size_S">14sp</dimen>
+    <dimen name="text_size_M">18sp</dimen>
+    <dimen name="text_size_L">22sp</dimen>
+    <dimen name="text_size_XL">27sp</dimen>
+    <dimen name="text_size_XXL">32sp</dimen>
+    <dimen name="text_size_XM">15sp</dimen>
+
+    <dimen name="user_profile_image_view_size">40dp</dimen>
+
+</resources>

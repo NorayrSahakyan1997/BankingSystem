@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="activity"
+            type="com.example.bankingsystem.view.auth.IntroductionActivity" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".view.auth.IntroductionActivity">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintWidth_percent="0.75"
+            app:layout_constraintHeight_percent="0.3"
+            android:background="@drawable/eclipse_png"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0"
+            app:layout_constraintHorizontal_bias="0"/>
+
+        <TextView
+            android:id="@+id/virtual_badges_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="@dimen/text_size_XXL"
+            android:fontFamily="@font/reem_rufi_regular"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            android:layout_marginStart="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.05"
+            />
+
+        <TextView
+            android:id="@+id/text_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_XL"
+            app:layout_constraintTop_toBottomOf="@+id/virtual_badges_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/black"
+            app:layout_constraintHorizontal_bias="0"
+            android:layout_marginStart="20dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/intro_description"
+            android:textSize="@dimen/text_size_M"
+            app:layout_constraintTop_toBottomOf="@+id/text_desc"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="20dp"
+            android:textColor="@color/hintColor"
+            app:layout_constraintHorizontal_bias="0"
+            android:layout_marginStart="20dp"
+            app:layout_constraintVertical_bias="0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:fontFamily="@font/reem_rufi_regular"
+            />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintWidth_percent="0.75"
+            app:layout_constraintHeight_percent="0.3"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/unboarding_pic"/>
+
+        <Button
+            android:id="@+id/logInButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/image_view_size_L"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/button_shape_auth"
+            android:backgroundTint="@color/logInButtonColor"
+            android:onClick="@{_->activity.logIn()}"
+            android:textColor="@color/white"
+            android:text="@string/logIn"
+            android:textSize="@dimen/text_size_L"
+            android:gravity="center"
+            android:fontFamily="@font/reem_rufi_regular"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.78" />
+
+
+        <Button
+            android:id="@+id/signUpButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/image_view_size_L"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/button_shape_auth"
+            android:backgroundTint="@color/signUpButtonColor"
+            android:onClick="@{_->activity.signUp()}"
+            android:text="@string/signUp"
+            android:textAllCaps="false"
+            android:textSize="@dimen/text_size_L"
+            android:gravity="center"
+            android:fontFamily="@font/reem_rufi_regular"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logInButton"
+            app:layout_constraintVertical_bias="0" />
+
+        <TextView
+            android:id="@+id/continueWithText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_XM"
+            android:text="@string/continueWith"
+            android:textColor="@color/black"
+            android:fontFamily="@font/reem_rufi_regular"
+            app:layout_constraintTop_toBottomOf="@+id/signUpButton"
+            android:gravity="center"
+            android:layout_marginTop="15dp"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
